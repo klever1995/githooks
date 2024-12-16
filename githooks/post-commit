@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Verifica si estás en la rama "main"
+# Check if you are on the "main" branch
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [ "$BRANCH" = "main" ]; then
-    echo "¡Commit exitoso en la rama 'main'!"
+    echo "Successful commit on the 'main' branch!"
 else
-    echo "¡Commit realizado en la rama '$BRANCH'!"
+    echo "Commit made on the '$BRANCH' branch!"
 fi

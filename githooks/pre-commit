@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Verifica si el archivo index.html existe
+# Check if the index.html file exists
 if [ ! -f "index.html" ]; then
-    echo "ERROR: index.html no se encuentra en el proyecto."
+    echo "ERROR: index.html is not found in the project."
     exit 1
 fi
 
-# Valida si el archivo index.html tiene las etiquetas <html> y </html>
+# Validate if the index.html file contains <html> and </html> tags
 if ! grep -q "<html>" index.html || ! grep -q "</html>" index.html; then
-    echo "ERROR: index.html no tiene las etiquetas HTML correctas. Por favor, corrige antes de hacer commit."
+    echo "ERROR: index.html does not have the correct HTML tags. Please fix it before committing."
     exit 1
 fi
 
-# Si pasa la validación, permite el commit
+# If validation passes, allow the commit
 exit 0
