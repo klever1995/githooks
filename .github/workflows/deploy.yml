@@ -27,8 +27,8 @@ jobs:
       with:
         context: .
         push: true
-        tags: ksrobalino/gitops:latest  # Cambiado a tu nombre de usuario y nombre de imagen
+        tags: ksrobalino/gitooks:latest  # Cambiado a tu nombre de usuario y nombre de imagen
 
     - name: Deploy Docker container to EC2 (or local)
       run: |
-        docker run -d -p 8080:80 ksrobalino/gitops:latest  # Cambiado a tu nombre de usuario y nombre de imagen
+        docker run -d -p 8080:80 ksrobalino/gitooks:latest  # Cambiado a tu nombre de usuario y nombre de imagen
